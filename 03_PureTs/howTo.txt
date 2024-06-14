@@ -1,0 +1,14 @@
+tsc --init  //this generates txconfig.json
+
+npm init -y //geerates package.json
+
+mkdir src dist
+touch src/indes.ts
+touch index.html
+
+in index.html, set the script to ./dist/index.js
+
+in tsconfig.json, set the outDir  = ./dist
+
+
+tsc -w //watches the ts files and generates their output in dist dir
