@@ -18,7 +18,29 @@ class User2 {
         this.email = email;
         this.name = name;
         this.userId = userId;
+        this._courseCount = 1;
         this.city = "kashmir";
+    }
+    get getAppleEmail() {
+        return `apple${this.email}`;
+    }
+    get courseCount() {
+        return this._courseCount;
+    }
+    set courseCount(courseNum) {
+        if (courseNum <= 1) {
+            throw new Error("Course count should be more than 1");
+        }
+        this._courseCount = courseNum;
     }
 }
 const muzaffar2 = new User2("m@m.com", "muzaffar", 5465123);
+class SubUser extends User2 {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
+    }
+}

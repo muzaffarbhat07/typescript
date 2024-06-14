@@ -20,6 +20,7 @@ const muzaffar = new User("m@m.com", "muzaffar")
 
 //different syntax
 class User2 {
+  protected _courseCount = 1
   readonly city: string = "kashmir"
   constructor(
     public email: string, 
@@ -27,5 +28,27 @@ class User2 {
     private userId: number
   ) {
   }
+
+  get getAppleEmail(): string {
+    return `apple${this.email}`
+  }
+
+  get courseCount(): number {
+    return this._courseCount;
+  }
+  set courseCount(courseNum: number) {
+    if(courseNum <= 1) {
+      throw new Error("Course count should be more than 1")
+    }
+
+    this._courseCount = courseNum;
+  }
 }
 const muzaffar2 = new User2("m@m.com", "muzaffar", 5465123)
+
+class SubUser extends User2 {
+  isFamily: boolean = true
+  changeCourseCount(){
+    this._courseCount = 4
+  }
+}
