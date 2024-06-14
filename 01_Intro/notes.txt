@@ -1,0 +1,15 @@
+Typescript is all about 'TYPE SAFETY'.
+
+It offers STATIC CHECKING. (Ananlyze the code as we type.)
+
+TS           ------------------------------------> JS
+It's a developmen tool. The project still runs JS.
+
+Types: number string boolean
+        null undefined void
+        object array tuples
+        any never unknown
+
+Syntax: let variableName: type = value;
+-> no type means 'any'
+-> 'any' is not type checked.
