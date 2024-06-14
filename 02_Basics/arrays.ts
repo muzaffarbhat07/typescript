@@ -1,10 +1,10 @@
 const superHeros: string[] = [];
 superHeros.push("spider")
-superHeros.push(1)
+// superHeros.push(1) //np
 
 // const heroPower: number[] = [];
 const heroPower: Array<number> = [];
-heroPower.push("spider")
+// heroPower.push("spider") //np
 heroPower.push(1)
 
 type User = {

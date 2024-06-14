@@ -3,7 +3,7 @@ function createUser({name: string, isPaid: boolean}){}
 createUser({name:"muzaffar", isPaid: true})
 
 //  WEIRD BEHAVIOUR
-createUser({name:"muzaffar", isPaid: true, email: "muz@g.com"});
+// createUser({name:"muzaffar", isPaid: true, email: "muz@g.com"}); \\np
 let newUser = {name:"muzaffar", isPaid: true, email: "muz@g.com"};
 createUser(newUser);
 
@@ -35,7 +35,7 @@ const myUser: PaidUser = {
 }
 
 myUser.email = "m@m.com";
-myUser._id = "345";
+// myUser._id = "345"; //np
 
 //COMBINING TYPES
 type cardNumber = {
