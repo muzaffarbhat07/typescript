@@ -45,3 +45,53 @@ const getMoreSearchProducts = <T,>(products: T[]): T => {
   const foundIndex = 4
   return products[foundIndex]
 }
+
+
+
+//objects
+function anotherFn<T, U>(val1: T, val2: U): object {
+  return {
+    val1,
+    val2
+  }
+}
+
+anotherFn(2, "abc")
+
+interface Database {
+  connection: string
+  username: string
+  password: string
+}
+
+function anotherFn2<T, U extends Database>(val1: T, val2: U): object {
+  return {
+    val1,
+    val2
+  }
+}
+
+// anotherFn2(2, "abc") //np
+// anotherFn2(4, {})
+
+
+
+//classes
+interface Quiz {
+  name: string
+  type: string
+}
+
+interface Course {
+  name: string
+  author: string
+  subject: string
+}
+
+class Sellable<T> {
+  public cart: T[] = [];
+
+  addToCart(product: T) {
+    this.cart.push(product);
+  }
+}

@@ -32,3 +32,25 @@ const getMoreSearchProducts = (products) => {
     const foundIndex = 4;
     return products[foundIndex];
 };
+//objects
+function anotherFn(val1, val2) {
+    return {
+        val1,
+        val2
+    };
+}
+anotherFn(2, "abc");
+function anotherFn2(val1, val2) {
+    return {
+        val1,
+        val2
+    };
+}
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
