@@ -20,3 +20,15 @@ function identitiy4(val) {
 }
 //syntax if u r passing own data types
 identitiy4({ brand: "aqua", type: 4 });
+//arrays in generics
+function getSearchProducts(products) {
+    //do some operations
+    const foundIndex = 3;
+    return products[foundIndex];
+}
+//arrow functions
+const getMoreSearchProducts = (products) => {
+    //do some operations
+    const foundIndex = 4;
+    return products[foundIndex];
+};
