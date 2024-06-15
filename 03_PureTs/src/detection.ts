@@ -25,3 +25,28 @@ function printAll(strs: string | string[] | null) {
     }
   }
 }
+
+
+interface User {
+  name: string
+  email: string
+}
+interface Admin {
+  name: string
+  email: string
+  isAdmin: boolean
+}
+
+//in operator narrowing
+function isAdminAccount(account: User | Admin) {
+  // if(account.isAdmin) //np
+
+  if("isAdmin" in account) {
+    return account.isAdmin
+  }
+}
+
+//NOTE: CHECK DOCS FOR NARROWING
+
+
+export {}

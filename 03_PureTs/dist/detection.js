@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function detectType(val) {
     if (typeof val === "string") {
         return val.toLowerCase();
@@ -23,5 +24,12 @@ function printAll(strs) {
         else {
             console.log(strs);
         }
+    }
+}
+//in operator narrowing
+function isAdminAccount(account) {
+    // if(account.isAdmin) //np
+    if ("isAdmin" in account) {
+        return account.isAdmin;
     }
 }
