@@ -84,3 +84,32 @@ class Youtube implements TakePhoto, Story {
     console.log("story is created")
   }
 }
+
+
+//Abstract classes
+abstract class TakePhoto1 {
+  constructor(
+    public cameraMode: string,
+    public filter: string
+  ){}
+  abstract getSepia(): void
+  getReelTime(): number {
+    //some complex calculations
+    return 8;
+  }
+}
+
+// const photo1 = new TakePhoto1("test", "Test") //np
+
+class Instagram1 extends TakePhoto1 {
+  constructor(
+    public cameraMode: string,
+    public filter: string,
+    public burst: number
+  ){
+    super(cameraMode, filter)
+  }
+  getSepia(): void {
+    console.log("sepia")
+  }
+}
