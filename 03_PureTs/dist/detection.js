@@ -33,3 +33,36 @@ function isAdminAccount(account) {
         return account.isAdmin;
     }
 }
+//instaneof narrowing: used with types created using 'new' keyword
+function logValue(x) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+    }
+    else {
+        console.log(x.toUpperCase());
+    }
+}
+function isFish(pet) {
+    return pet.swim !== undefined;
+}
+function isFish2(pet) {
+    return pet.swim !== undefined;
+}
+function getFood(pet) {
+    if (isFish(pet)) {
+        pet; //ts is still not sure whether pet is Fish or Bird because isFis returns boolean
+        console.log("fish food");
+    }
+    else {
+        pet; //ts is still not sure whether pet is Fish or Bird
+        console.log("bird food");
+    }
+    if (isFish2(pet)) {
+        pet; //now ts is sure because isFish2 returns Fish
+        console.log("fish food");
+    }
+    else {
+        pet;
+        console.log("bird food");
+    }
+}
